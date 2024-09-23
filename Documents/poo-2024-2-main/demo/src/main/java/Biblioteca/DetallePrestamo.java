@@ -1,5 +1,7 @@
 package Biblioteca;
 
+import javafx.beans.property.FloatProperty;
+
 public class DetallePrestamo {
     private String cantidadLibros;
     private float precioPorDia;
@@ -12,7 +14,7 @@ public class DetallePrestamo {
         this.cantidadLibros = cantidadLibros;
     }
 
-    public float getPrecioPorDia() {
+    public FloatProperty getPrecioPorDia() {
         return precioPorDia;
     }
 

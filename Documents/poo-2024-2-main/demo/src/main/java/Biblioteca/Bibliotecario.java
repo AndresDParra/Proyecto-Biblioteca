@@ -1,5 +1,4 @@
 package Biblioteca;
-import Bibllioteca.Prestamo;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.StringProperty;
 
@@ -13,6 +12,11 @@ public class Bibliotecario extends Persona {
         super(nombre, cedula, correo, telefono);
     }
 
+    public Bibliotecario(StringProperty nombre, StringProperty cedula, StringProperty correo, StringProperty telefono, FloatProperty salario, LocalDate tiempoEnLaEmpresa) {
+        super(nombre, cedula, correo, telefono);
+        this.salario = salario;
+        this.tiempoEnLaEmpresa = tiempoEnLaEmpresa;
+    }
 
     public void agregarPrestamo(StringProperty codigo, LocalDate fechaInincio, LocalDate fechaEntrega){
         Prestamo prestamo = new Prestamo(codigo, fechaInincio, fechaEntrega);
@@ -34,9 +38,5 @@ public class Bibliotecario extends Persona {
         this.tiempoEnLaEmpresa = tiempoEnLaEmpresa;
     }
 
-    public Bibliotecario(StringProperty nombre, StringProperty cedula, StringProperty correo, StringProperty telefono, FloatProperty salario, LocalDate tiempoEnLaEmpresa) {
-        super(nombre, cedula, correo, telefono);
-        this.salario = salario;
-        this.tiempoEnLaEmpresa = tiempoEnLaEmpresa;
-    }
+
 }
