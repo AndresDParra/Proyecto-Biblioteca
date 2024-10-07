@@ -11,7 +11,7 @@ public class Biblioteca {
     private String nombre;
     private ArrayList<Bibliotecario> bibliotecarios;
     private static ArrayList<Libro> libros;
-    private ArrayList<Estudiante> estudiantes;
+    private static ArrayList<Estudiante> estudiantes;
     private ArrayList<DetallePrestamo> detallePrestamos;
     private ArrayList<Prestamo> prestamos;
 
@@ -38,7 +38,7 @@ public class Biblioteca {
         this.libros = libros;
     }
 
-    public ArrayList<Estudiante> getEstudiantes() {
+    public static ArrayList<Estudiante> getEstudiantes() {
         return (ArrayList<Estudiante>) estudiantes;
     }
 
@@ -92,9 +92,9 @@ public class Biblioteca {
     }
 
 
-    public static void agregarLibro(String codigo, String isbn, String autor, String titulo, String editorial, LocalDate fechaPublicación, String unidadesDisponibles) {
+    public static void agregarLibro(String codigo, String isbn, String titulo, String autor , String editorial, LocalDate fechaPublicación, String unidadesDisponibles) {
         Libro libro = new Libro(codigo, isbn, titulo, autor, editorial, fechaPublicación, unidadesDisponibles);
-        libros.add(libro);
+        Biblioteca.getLibros().add(libro);
 
     }
 
@@ -112,7 +112,7 @@ public class Biblioteca {
         }
     }
 
-    public void agregarEstudiante(String nombre, String cedula, String correo, String telefono) {
+    public static void agregarEstudiante(String nombre, String cedula, String correo, String telefono) {
         Estudiante estudiante = new Estudiante(nombre, cedula, correo, telefono);
         estudiantes.add(estudiante);
     }

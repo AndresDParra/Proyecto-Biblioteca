@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uq.sample.thefxapp.controllers.My_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uq.sample.thefxapp.controllers.Guardar_Libro">
    <children>
       <TextField fx:id="Espacio_ISBN" layoutX="316.0" layoutY="95.0" prefHeight="26.0" prefWidth="186.0" />
       <TextField fx:id="Espacio_autor" layoutX="316.0" layoutY="140.0" prefHeight="26.0" prefWidth="186.0" />

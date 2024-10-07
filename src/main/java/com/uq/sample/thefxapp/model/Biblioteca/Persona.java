@@ -8,7 +8,7 @@ public class Persona {
     private String correo;
     private String telefono;
 
-    public String nombreProperty() {
+    public String getNombre() {
         return nombre;
     }
 
@@ -16,7 +16,7 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public String cedulaProperty() {
+    public String getCedula() {
         return cedula;
     }
 
@@ -24,7 +24,7 @@ public class Persona {
         this.cedula = cedula;
     }
 
-    public String correoProperty() {
+    public String getCorreo() {
         return correo;
     }
 
@@ -32,7 +32,7 @@ public class Persona {
         this.correo = correo;
     }
 
-    public String telefonoProperty() {
+    public String getTelefono() {
         return telefono;
     }
 

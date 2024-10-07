@@ -11,6 +11,10 @@ public class Prestamo {
     private LocalDate fechaFinal;
     private List<Estudiante> estudiantesRegistrados;
 
+    public static Prestamo getSamplePrestamo() {
+        return new Prestamo("123", LocalDate.now(), LocalDate.now().plusDays(7), List.of(Estudiante.getSampleEstudiante()));
+    }
+
     public String getCodigo() {
         return codigo;
     }
