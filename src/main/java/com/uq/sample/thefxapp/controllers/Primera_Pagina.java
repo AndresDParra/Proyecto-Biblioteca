@@ -35,7 +35,7 @@ public class Primera_Pagina {
     public void pasar_a_crear_prestamo(ActionEvent actionEvent) throws IOException {
         Stage stagePasarACrearPresatamo = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
-        Parent paginaCrearPrestamo = fxmlLoader.load(getClass().getResource("/com/uq/sample/thefxapp/view/FrontEnd/Pagina_Crear_Prestamo.fxml"));
+        Parent paginaCrearPrestamo = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("/com/uq/sample/thefxapp/view/FrontEnd/Pagina_Crear_Prestamo.fxml")));
         Scene scene = new Scene(paginaCrearPrestamo, 500, 500);
         stagePasarACrearPresatamo.setScene(scene);
         stagePasarACrearPresatamo.show();
@@ -44,7 +44,7 @@ public class Primera_Pagina {
     public void pasar_reporte(ActionEvent actionEvent) throws IOException {
         Stage stageARevisarHistorial = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
-        Parent paginaBorrarLibro = fxmlLoader.load(getClass().getResource("/com/uq/sample/thefxapp/view/FrontEnd/Pagina_reporte.fxml"));
+        Parent paginaBorrarLibro = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("/com/uq/sample/thefxapp/view/FrontEnd/Pagina_reporte.fxml")));
         Scene scene = new Scene(paginaBorrarLibro, 500, 500);
         stageARevisarHistorial.setScene(scene);
         stageARevisarHistorial.show();
@@ -57,5 +57,9 @@ public class Primera_Pagina {
         Scene scene = new Scene(paginaGuardarLibro, 500, 500);
         stagePasarGuardarLibro.setScene(scene);
         stagePasarGuardarLibro.show();
+    }
+
+    public void pasar_a_crear_estudiante(){
+
     }
 }

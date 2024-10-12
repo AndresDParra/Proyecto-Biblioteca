@@ -7,7 +7,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uq.sample.thefxapp.controllers.Borrar_Estudiante">
    <children>
       <Text layoutX="232.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buscar Estudiante" textAlignment="CENTER" wrappingWidth="136.21630859375">
@@ -27,7 +26,7 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <TextArea layoutX="28.0" layoutY="218.0" prefHeight="120.0" prefWidth="545.0" />
+      <TextArea fx:id="Area_Info_Estudiante" layoutX="28.0" layoutY="218.0" prefHeight="120.0" prefWidth="545.0" />
       <Button fx:id="Button_buscar_Estudiante" layoutX="273.0" layoutY="174.0" mnemonicParsing="false" onAction="#buscar_Estudiante" text="Buscar" />
       <Button fx:id="Button_Borrar_Estudiante" layoutX="275.0" layoutY="350.0" mnemonicParsing="false" onAction="#borrar_Estudiante" text="Borrar" />
    </children>

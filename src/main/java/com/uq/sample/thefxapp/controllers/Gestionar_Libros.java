@@ -5,12 +5,14 @@ import com.uq.sample.thefxapp.model.Biblioteca.Libro;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import static com.uq.sample.thefxapp.controllers.Alert.showAlert;
 
 public class Gestionar_Libros {
+    public Button Button_para_borrar_libro;
     @FXML
     private TextArea Area_Del_Libro;
     @FXML

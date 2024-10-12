@@ -12,8 +12,16 @@ public class Biblioteca {
     private ArrayList<Bibliotecario> bibliotecarios;
     private static ArrayList<Libro> libros;
     private static ArrayList<Estudiante> estudiantes;
-    private ArrayList<DetallePrestamo> detallePrestamos;
-    private ArrayList<Prestamo> prestamos;
+    private static ArrayList<DetallePrestamo> detallePrestamos;
+    private static ArrayList<Prestamo> prestamos;
+
+    public static void agregarPrestamo(String codigoPrestamo, LocalDate fechaInicio, LocalDate fechaFinal, String cantidadLibro, float precioPorDia, Estudiante estudiantes) {
+        Prestamo prestamo = new Prestamo(codigoPrestamo, fechaInicio, fechaFinal, (List<Estudiante>) estudiantes);
+        DetallePrestamo detallePrestamo = new DetallePrestamo(cantidadLibro, precioPorDia);
+        detallePrestamos.add(detallePrestamo);
+        prestamos.add(prestamo);
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -153,9 +161,9 @@ public class Biblioteca {
 
     public Object buscarEstudiantesMasPrestamos(Estudiante estudiante, ListProperty<Estudiante> estudiantesRegistrados) {
 
-        String codigoAux = String.valueOf(estudiante.nombreProperty());
+        String nombreAux = String.valueOf(estudiante.getNombre());
         for (Estudiante estudiante1 : estudiantesRegistrados) {
-            if (estudiante1.nombreProperty().equals(codigoAux)) {
+            if (estudiante1.getNombre().equals(nombreAux)) {
                 System.out.println(estudiante1);
                 return estudiante1;
             }
@@ -198,6 +206,14 @@ public class Biblioteca {
        Float bonuses = (float) (bibliotecario.salario + bibliotecario.salario * 0.02 * calcularPorcentajeDeAumento(fechaInicio, fechaFinal));
 
         return bonuses;
+    }
+    public static Estudiante findEstudianteByName(String estudianteNombre) {
+        for (Estudiante estudiante : estudiantes) {
+            if (estudiante.getNombre().equals(estudianteNombre)) {
+                return estudiante;
+            }
+        }
+        return null;
     }
 
     @Override

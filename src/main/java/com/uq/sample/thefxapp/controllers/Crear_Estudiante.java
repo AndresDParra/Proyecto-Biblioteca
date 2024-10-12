@@ -2,6 +2,7 @@ package com.uq.sample.thefxapp.controllers;
 
 import com.uq.sample.thefxapp.model.Biblioteca.Biblioteca;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 import java.time.LocalDate;
@@ -11,6 +12,8 @@ import java.util.stream.Stream;
 import static com.uq.sample.thefxapp.controllers.Alert.showAlert;
 
 public class Crear_Estudiante {
+    @FXML
+    public Button Button_Crear_Estudiante;
     @FXML
     private TextField espacio_Nombre;
     @FXML

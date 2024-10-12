@@ -14,6 +14,5 @@
       </Text>
       <Button fx:id="Button_Crear_Estudiante" layoutX="256.0" layoutY="110.0" mnemonicParsing="false" onAction="#pasar_a_crear_estudiante" prefHeight="26.0" prefWidth="88.0" text="Crear" />
       <Button fx:id="Button_Borrar_Estudiante" layoutX="256.0" layoutY="187.0" mnemonicParsing="false" onAction="#pasar_a_borrar_estudiante" prefHeight="26.0" prefWidth="88.0" text="Borrar" />
-      <Button fx:id="Button_Actualizar_Estudiante" layoutX="256.0" layoutY="264.0" mnemonicParsing="false" onAction="#pasar_a_actualizar_estudiante" prefHeight="26.0" prefWidth="88.0" text="Actualizar" />
    </children>
 </AnchorPane>

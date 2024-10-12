@@ -11,5 +11,13 @@ public class Estudiante extends Persona {
         return new Estudiante("Pedro", "23456", "mike@cakc", "234567");
     }
 
-
-}
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "nombre='" + getNombre() + '\'' +
+                ", cedula='" + getCedula() + '\'' +
+                ", correo='" + getCorreo() + '\'' +
+                ", telefono='" + getTelefono() + '\'' +
+                '}';
+    }
+    }
